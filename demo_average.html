@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form average</title>
+    <link rel="stylesheet" href="demo_average.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Average</h1>
+		  <p> M1<input type="text" id="m1"></input></p>
+    	<p> M2<input type="text" id="m2"></input></p>
+    	<p> M3<input type="text" id="m3"></input></p>
+    	<button id="averageBtn">Average</button>
+        <p id="result"></p>
+    </main>
+
+    <script>
+      document.getElementById("averageBtn").addEventListener("click", () => {
+        let m1 = document.getElementById("m1").value;
+        let m2 = document.getElementById("m2").value;
+        let m3 = document.getElementById("m3").value;
+        avg = (m1*1 + m2*1 + m3*1) /3;
+        let result = document.getElementById("result");
+        result.innerHTML = avg;
+      });
+    </script>
+  </body>
+</html>
